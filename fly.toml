@@ -1,12 +1,16 @@
-# fly.toml app configuration file generated for pocketbase on 2025-09-30T00:02:50Z
+# fly.toml app configuration file generated for fuel-fit-pb on 2025-09-30T00:24:28Z
 #
 # See https://fly.io/docs/reference/configuration/ for information about how to use this file.
 #
 
-app = 'pocketbase'
+app = 'fuel-fit-pb'
 primary_region = 'syd'
 
 [build]
+
+[[mounts]]
+  source = 'pb_data'
+  destination = '/pb/pb_data'
 
 [http_service]
   internal_port = 8080
