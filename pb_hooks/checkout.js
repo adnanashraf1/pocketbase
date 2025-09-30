@@ -1,7 +1,10 @@
-onBeforeServe((e) => {
-  console.log("✅ Checkout route loaded");
+/// pb_hooks/checkout.js
 
-  e.router.add("POST", "/checkout", async (c) => {
-    return c.json(200, { success: true, message: "Checkout route working!" });
-  });
-});
+console.log("✅ Checkout hook file loaded");
+
+routerAdd("POST", "/checkout", (c) => {
+  return c.json(200, {
+    success: true,
+    message: "Checkout route working with routerAdd!"
+  })
+})
