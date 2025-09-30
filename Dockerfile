@@ -16,5 +16,8 @@ RUN curl -L -o pb.zip https://github.com/pocketbase/pocketbase/releases/download
 # Expose PocketBase port
 EXPOSE 8080
 
+# Persist PocketBase data
+VOLUME ["/pb/pb_data"]
+
 # Start PocketBase
 CMD ["/pb/pocketbase", "serve", "--http=0.0.0.0:8080"]
