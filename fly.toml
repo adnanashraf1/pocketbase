@@ -24,4 +24,4 @@ primary_region = 'syd'
 
 [mounts]
   source="pb_data"
-  destination="/pb_data"
+  destination="/pb/pb_data"
