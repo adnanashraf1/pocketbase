@@ -13,6 +13,10 @@ RUN curl -L -o pb.zip https://github.com/pocketbase/pocketbase/releases/download
     && unzip pb.zip \
     && rm pb.zip
 
+# Copy your app files (hooks, migrations, seed data, etc.)
+# Make sure these folders exist in your repo
+COPY pb_hooks /pb/pb_hooks
+
 # Expose PocketBase port
 EXPOSE 8080
 
