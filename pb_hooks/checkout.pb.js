@@ -1,4 +1,4 @@
-/// pb_hooks/checkout.js
+/// <reference path="../pb_data/types.d.ts" />
 
 console.log("✅ Checkout hook file loaded");
 
